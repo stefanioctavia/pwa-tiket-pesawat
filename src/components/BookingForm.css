@@ -1,0 +1,160 @@
+/* Membuat tampilan penuh dengan warna biru gelap */
+.booking-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #0a192f, #1a2a4f);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styling untuk form pemesanan */
+.booking-card {
+    background-color: rgba(15, 23, 42, 0.95);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.1);
+    width: 400px;
+    max-width: 100%;
+    text-align: left;
+}
+
+/* Styling input dan select agar responsif */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.input-group select,
+.input-group input {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #1e293b;
+    color: white;
+    border: 1px solid #3b82f6;
+    width: 100%;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.input-group select:focus,
+.input-group input:focus {
+    outline: none;
+    border-color: #1e40af;
+    transform: scale(1.02);
+}
+
+/* Tombol */
+.booking-button, .calculate-button {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+    border: none;
+    margin-top: 10px;
+}
+
+.booking-button:hover, .calculate-button:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
+}
+
+/* Box Harga */
+.price-box {
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #1e293b;
+    color: #3b82f6;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Link kembali */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #e5e7eb;
+}
+
+/* Notifikasi */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 2.5s;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* 🔹 MEDIA QUERY UNTUK RESPONSIF 🔹 */
+@media (max-width: 480px) {
+    .booking-container {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .booking-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 16px;
+    }
+
+    .input-group label {
+        font-size: 0.9rem;
+    }
+
+    .input-group select,
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .booking-button, .calculate-button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .notification {
+        right: 10px;
+        top: 10px;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

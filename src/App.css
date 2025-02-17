@@ -1,0 +1,19 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center; /* Pusatkan vertikal dan horizontal */
+  background-color: #111;
+}
+
+.container {
+  text-align: center;
+}
+
+.booking-form {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
