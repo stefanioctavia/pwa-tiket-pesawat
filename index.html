@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Tiket Pesawat</title>
+    <link rel="manifest" href="/pwa-tiket-pesawat/manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceWorker.js')
+                .then(reg => console.log("Service Worker Registered", reg))
+                .catch(err => console.log("Service Worker Failed", err));
+        }
+        
+    </script>
+  <script type="module" crossorigin src="/pwa-tiket-pesawat/assets/index-DPg0NpEY.js"></script>
+  <link rel="stylesheet" crossorigin href="/pwa-tiket-pesawat/assets/index-BOCmEbus.css">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
